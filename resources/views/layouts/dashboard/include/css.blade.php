@@ -22,10 +22,20 @@
     @endif
 
     @if(app()->getLocale()=='ar')
-        <link rel="stylesheet" href="{{ asset('admin') }}/dist/css/AdminLTE-rtl.min.css" />
+
+        <link rel="stylesheet" href="{{ asset('admin') }}/dist/css/app.css" />
+
         <link rel="stylesheet" href="{{ asset('admin') }}/dist/css/app-rtl.css" />
-        <link rel="stylesheet" href="{{ asset('admin') }}/dist/css/bootstrap-rtl.min.css" />
         <link rel="stylesheet" href="{{ asset('admin') }}/dist/css/rtl.css" />
+        <link rel="stylesheet" href="{{ asset('admin') }}/dist/css/bootstrap-rtl.min.css" />
+        <link rel="stylesheet" href="{{ asset('admin') }}/dist/css/custom.css" />
+
+
+        <style>
+            body, h1, h2, h3, h4, h5, h6 {
+                font-family: 'Cairo', sans-serif !important;
+            }
+        </style>
 
 
 
