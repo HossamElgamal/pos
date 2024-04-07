@@ -15,4 +15,19 @@
 
     <link rel="stylesheet" href="{{asset('admin')}}/plugins/select2/css/select2.min.css">
     <link rel="stylesheet" href="{{asset('admin')}}/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+
+    @if(app()->getLocale()=='en')
+        <link rel="stylesheet" href="{{ asset('admin') }}/dist/css/app.css" />
+        <link rel="stylesheet" href="{{ asset('admin') }}/dist/css/app-ltr.css" />
+    @endif
+
+    @if(app()->getLocale()=='ar')
+        <link rel="stylesheet" href="{{ asset('admin') }}/dist/css/AdminLTE-rtl.min.css" />
+        <link rel="stylesheet" href="{{ asset('admin') }}/dist/css/app-rtl.css" />
+        <link rel="stylesheet" href="{{ asset('admin') }}/dist/css/bootstrap-rtl.min.css" />
+        <link rel="stylesheet" href="{{ asset('admin') }}/dist/css/rtl.css" />
+
+
+
+    @endif
 </head>
