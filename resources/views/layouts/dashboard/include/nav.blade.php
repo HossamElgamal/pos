@@ -1,4 +1,4 @@
-<nav class="main-header navbar navbar-expand navbar-dark" style="width: 100%">
+<nav class="main-header navbar navbar-expand navbar-dark" style="margin-right: 0">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
         <li class="nav-item">
@@ -10,7 +10,22 @@
         <li class="nav-item d-none d-sm-inline-block">
             <a href="#" class="nav-link">Contact</a>
         </li>
+
+
     </ul>
+    <div class="dropdown">
+        <button class="btn btn-grey dropdown-toggle" style=" color: rgba(255, 255, 255, .75);" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Language
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                <a class="dropdown-item"  rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                    {{ $properties['native'] }}
+                </a>
+            @endforeach
+        </div>
+    </div>
+
 
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">

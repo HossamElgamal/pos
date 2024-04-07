@@ -10,6 +10,8 @@ Route::group(['prefix' => LaravelLocalization::setLocale(),
     Route::prefix('dashboard')->name('dashboard.')->group(function (){
 
         Route::get('/index','DashboardController@index')->name('index');
+        Route::get('users' ,'UserController@index')->name('users.index');
+        Route::get('users/create' ,'UserController@create')->name('users.create');
 
     });
 });
